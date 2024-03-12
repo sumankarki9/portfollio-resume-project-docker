@@ -5,10 +5,10 @@ RUN apt update -y && \
 
 RUN rm -rf /var/www/html/
 
-RUN  git clone git@github.com:sumankarki9/portfollio-resume-project-docker.git /var/www/html/
 
-EXPOSE 80 
 
-CMD [ "nginx", "-g", "daemon off;" ]
-    
-    
+RUN git clone https://github.com/sumankarki9/portfollio-resume-project-docker.git /var/www/html/
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
